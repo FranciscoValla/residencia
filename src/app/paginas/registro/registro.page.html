@@ -1,0 +1,74 @@
+<ion-header>
+
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button color="dark" routerLink="/login"> 
+        <ion-icon slot="start"></ion-icon>
+        Iniciar Sesion
+      </ion-button>
+    </ion-buttons>
+<!--  -->
+    <ion-buttons slot="end">
+      <ion-button >
+        Registrate
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+    <h1>Nombre de Usuario</h1>
+
+    <ion-item>
+      <ion-label>Apellido paterno: </ion-label>
+      <ion-input type="text" [(ngModel)]="paterno"></ion-input>  
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Apellido materno: </ion-label>
+      <ion-input type="text" [(ngModel)]="materno"></ion-input>  
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Nombre(s): </ion-label>
+      <ion-input type="text" [(ngModel)]="nombre"></ion-input>
+    </ion-item>
+
+    <!-- <ion-item>
+      <ion-label>Fecha de Nacimiento: </ion-label>
+      <ion-input type="date" max="2006-12-31" [(ngModel)]="nacimiento"></ion-input>  
+    </ion-item>
+  -->
+
+    <ion-item>
+      <ion-label>Foto de perfil </ion-label>
+      <ion-input type="text" [(ngModel)]="foto"></ion-input>  
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>Telefono</ion-label>
+    <ion-input type="tel" [(ngModel)]="telefono"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Email</ion-label>
+    <ion-input type="email" [(ngModel)]="email"> </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Contraseña</ion-label>
+    <ion-input type="password" [(ngModel)]="contra" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Repetir contraseña</ion-label>
+    <ion-input type="password" [(ngModel)]="contra2" ></ion-input>
+    </ion-item>
+
+    <ion-button (click)="registrar()" fill="clear" > <!-- (click)="registro()"  -->
+      Registrar
+    </ion-button>
+
+</ion-content>

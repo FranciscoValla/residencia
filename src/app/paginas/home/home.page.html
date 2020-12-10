@@ -1,0 +1,55 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>
+      Proyectos  
+    </ion-title>
+    <ion-button slot="end" (click)="logout()" >
+      Desconectarse
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list>
+
+    <ion-img [src]="foto"></ion-img>
+    <h1> {{correo}} </h1>
+    <h3> {{nombre}} </h3>
+    
+ 
+ </ion-list>
+
+  <ion-list *ngFor="let proyecto of proyectos" >
+
+    <ion-item class="ion-no-border">
+      <ion-avatar slot="start" (click)="abrirProyecto(proyecto)"
+      class="ion-no-border">
+        <ion-img [src]="proyecto.img"></ion-img>
+      </ion-avatar>
+      <ion-label (click)="abrirProyecto(proyecto)">
+        <p>{{proyecto.nombre}}</p>
+        <small>${{proyecto.presupuesto}}</small>
+      </ion-label>
+      <ion-label>
+        <p> {{proyecto.subnombre}} </p>
+        <small> {{proyecto.fecha_final}} </small>
+      </ion-label>
+    </ion-item>
+    <ion-button (click)="eliminar(proyecto.id)" fill="clear">
+      <ion-icon  name="trash-outline"></ion-icon>
+    </ion-button>
+    <ion-button  fill="clear" routerLink="/actualizar">
+      <ion-icon  name="ellipsis-vertical-circle-outline"></ion-icon>
+    </ion-button>
+
+   </ion-list>
+
+   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+     <ion-fab-button routerLink="/crear">
+       <ion-icon name="add"></ion-icon>
+     </ion-fab-button>
+   </ion-fab>
+
+   
+</ion-content>

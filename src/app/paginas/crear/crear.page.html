@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> Crear Nuevo Proyecto </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-item >
+    <ion-label> Nombre del proyecto: </ion-label>
+    <ion-input type="text" required [(ngModel)]="nombre"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label> Subnombre: </ion-label>
+    <ion-input type="text" [(ngModel)]="subnombre" ></ion-input>
+  </ion-item>
+
+  <ion-item >
+    <ion-label> Presupuesto límite: </ion-label>
+    <ion-input type="number" required [(ngModel)]="presupuesto"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Img:</ion-label>
+    <ion-input type="text" [(ngModel)]="img"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Fecha final:</ion-label>
+    <ion-input type="date" [(ngModel)]="fecha_final"></ion-input>
+  </ion-item>
+
+  <ion-button (click)="crear()" expad="full" fill="clear">
+    Guardar
+  </ion-button>
+  
+</ion-content>

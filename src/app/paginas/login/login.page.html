@@ -1,0 +1,45 @@
+<ion-header>
+
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon slot="start"></ion-icon>
+        Iniciar Sesion
+      </ion-button>
+    </ion-buttons>
+<!--  -->
+    <ion-buttons slot="end">
+      <ion-button color="dark" routerLink="/registro">
+        Registrate
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+
+  <div id="header">  
+    <!-- <img src="assets/foto1.jpg" > -->
+    <h1>Nombre de Usuario</h1>
+  </div>
+
+  <form id="form">
+    <ion-label>Correo electronico</ion-label>
+    <ion-input type="email" name="email"
+    [(ngModel)]="email"></ion-input>
+
+    <ion-label>Contraseña</ion-label>
+    <ion-input type="password" name="password"
+    [(ngModel)]="password"></ion-input>
+
+    <ion-button expand="block" shape="round" id="boton" 
+    (click)="enviarLogin()">
+      Ingresar
+    </ion-button>
+    
+  </form>
+
+  <ion-label>No recuerdas tu contraseña?. Click aqui <a color="primary" routerLink="/reestablecer">Reestablecer contraseña</a>  </ion-label>
+
+</ion-content>

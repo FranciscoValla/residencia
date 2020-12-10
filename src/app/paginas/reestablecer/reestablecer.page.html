@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Reestablecer contraseña</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <h3 color="success">Enviar Correo electronico para reestablecer tu contraseña</h3>
+
+  <ion-item>
+    <ion-label>Correo Electronico:</ion-label>
+    <ion-input type="text" [(ngModel)]="email"></ion-input>
+  </ion-item>
+
+  <ion-button (click)="reestablecerContra()" expand="block" fill="clear" shape="round">
+    Aceptar
+  </ion-button>
+
+  <h2 routerLink="/login" color="primary">Regresar al Login</h2>
+
+</ion-content>
