@@ -8,7 +8,7 @@ import { NologinGuard } from './guards/nologin.guard';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'inicio',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
   {

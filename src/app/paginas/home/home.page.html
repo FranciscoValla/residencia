@@ -1,24 +1,21 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-title>
-      Proyectos  
+    {{nombre}}  
     </ion-title>
-    <ion-button slot="end" (click)="logout()" >
-      Desconectarse
-    </ion-button>
+    
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-
-  <ion-list>
-
-    <ion-img [src]="foto"></ion-img>
-    <h1> {{correo}} </h1>
-    <h3> {{nombre}} </h3>
-    
- 
- </ion-list>
+<ion-content >
+  <ion-avatar>
+    <img [src]="foto" />
+  </ion-avatar>
+  <ion-button (click)="logout()" >
+    Desconectarse
+  </ion-button>
+  <ion-label>{{correo}} </ion-label>
+  
 
   <ion-list *ngFor="let proyecto of proyectos" >
 
